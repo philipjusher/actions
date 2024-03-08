@@ -136,7 +136,7 @@ runs:
       run: |
         if grep -q 'build-backend = "poetry\.core\.masonry\.api"' "pyproject.toml"; then
           python -m pip install poetry
-          poetry config settings.virtualenvs.create false
+          poetry config virtualenvs.create false
           poetry install --with tests
         else
           python -m pip install .[tests]
