@@ -137,6 +137,7 @@ runs:
         if grep -q 'build-backend = "poetry\.core\.masonry\.api"' "pyproject.toml"; then
           python -m pip install poetry
           poetry install --with tests
+          poetry shell
         else
           python -m pip install .[tests]
         fi
